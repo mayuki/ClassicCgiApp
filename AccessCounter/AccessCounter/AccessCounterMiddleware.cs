@@ -25,7 +25,7 @@ namespace AccessCounter
         /// <summary>
         /// 画像のベースディレクトリを取得、設定します。
         /// </summary>
-        public string ResourcesBaseDirectory { get; set; } = Path.Combine(Path.GetDirectoryName(typeof(AccessCounterMiddleware).Assembly.Location), @"Resources");
+        public string ResourcesBaseDirectory { get; set; } = Path.Combine(Path.GetDirectoryName(typeof(AccessCounterMiddleware).Assembly.Location), "AccessCounter", "Resources");
     }
 
     public class AccessCounterMiddleware

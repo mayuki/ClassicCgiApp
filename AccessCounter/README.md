@@ -1,8 +1,15 @@
 ﻿# アクセスカウンター
 
-アクセス数を画像で返します。
+アクセス数を数えて画像を返すアレです。
 
 ![](docs/Screenshot-01.png)
+
+## カウンター画像
+http://navi21.jp/dron/sozai/index.html
+
+
+## 自分のプロジェクトでの使い方
+AccessCounter ディレクトリを適当にコピーすれば使えます。Redisバックエンド以外で永続化したい場合にはなんか適当に頑張ってください。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
