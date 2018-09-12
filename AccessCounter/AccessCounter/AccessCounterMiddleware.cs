@@ -31,10 +31,10 @@ namespace AccessCounter
     public class AccessCounterMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly IBackend _backend;
+        private readonly IAccessCounterBackend _backend;
         private readonly AccessCounterOptions _options;
 
-        public AccessCounterMiddleware(RequestDelegate next, IBackend backend, AccessCounterOptions options)
+        public AccessCounterMiddleware(RequestDelegate next, IAccessCounterBackend backend, AccessCounterOptions options)
         {
             _next = next;
             _backend = backend;
@@ -127,15 +127,15 @@ namespace Microsoft.Extensions.DependencyInjection
 
             public void UseInMemoryBackend()
             {
-                _services.AddSingleton<IBackend>(new InMemoryBackend());
+                _services.AddSingleton<IAccessCounterBackend>(new InMemoryAccessCounterBackend());
             }
 
-            public void UseRedisBackend(Action<RedisBackend.RedisBackendOptions> configure)
+            public void UseRedisBackend(Action<RedisAccessCounterBackend.RedisBackendOptions> configure)
             {
-                var options = new RedisBackend.RedisBackendOptions();
+                var options = new RedisAccessCounterBackend.RedisBackendOptions();
                 configure(options);
 
-                _services.AddSingleton<IBackend>(new RedisBackend(options));
+                _services.AddSingleton<IAccessCounterBackend>(new RedisAccessCounterBackend(options));
             }
         }
     }

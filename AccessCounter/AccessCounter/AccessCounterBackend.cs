@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 
 namespace AccessCounter
 {
-    public interface IBackend
+    public interface IAccessCounterBackend
     {
         Task<long> IncrementAsync();
         Task<long> GetAsync();
     }
 
-    public class InMemoryBackend : IBackend
+    public class InMemoryAccessCounterBackend : IAccessCounterBackend
     {
         private long _counter = 0;
 
@@ -25,12 +25,12 @@ namespace AccessCounter
         }
     }
 
-    public class RedisBackend : IBackend
+    public class RedisAccessCounterBackend : IAccessCounterBackend
     {
         private readonly RedisBackendOptions _options;
         private readonly ConnectionMultiplexer _connection;
 
-        public RedisBackend(RedisBackendOptions options)
+        public RedisAccessCounterBackend(RedisBackendOptions options)
         {
             _options = options;
             _connection = ConnectionMultiplexer.Connect(options.ConnectionString);
