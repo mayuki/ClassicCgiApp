@@ -1,0 +1,26 @@
+html {
+    background: #76efff;
+    font-family: 'MS PGothic', 'sans-serif';
+}
+
+h1 {
+    text-align: center;
+    transform: skewX(-22.5deg);
+}
+
+p {
+    text-align: center;
+}
+
+hr {
+    height: 2px;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 48px;
+    background: radial-gradient(ellipse at center, #f20408 1%,#8f0222 44%,#6d0019 100%);
+    font-size: 2rem;
+    color: #fff;
+}

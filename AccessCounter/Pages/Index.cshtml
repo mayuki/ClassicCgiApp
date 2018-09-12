@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>AccessCounterのホームページ</h1>
+
+<hr />
+
+<p>ようこそ、@(User.Identity.IsAuthenticated ? User.Identity.Name : "ゲスト")さん</p>
+<p>あなたは <img src="counter.cgi" /> 番目のお客様です!</p>
+
+<p><a class="btn" href="https://github.com/mayuki/ClassicCgiApp">GitHub</a></p>

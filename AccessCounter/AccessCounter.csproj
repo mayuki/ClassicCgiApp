@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerTargetOS>Linux</DockerTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AccessCounter\Resources\gif34\0.gif" />
+    <None Remove="AccessCounter\Resources\gif34\1.gif" />
+    <None Remove="AccessCounter\Resources\gif34\2.gif" />
+    <None Remove="AccessCounter\Resources\gif34\3.gif" />
+    <None Remove="AccessCounter\Resources\gif34\4.gif" />
+    <None Remove="AccessCounter\Resources\gif34\5.gif" />
+    <None Remove="AccessCounter\Resources\gif34\6.gif" />
+    <None Remove="AccessCounter\Resources\gif34\7.gif" />
+    <None Remove="AccessCounter\Resources\gif34\8.gif" />
+    <None Remove="AccessCounter\Resources\gif34\9.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AccessCounter\Resources\gif34\0.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\1.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\2.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\4.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\5.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\6.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\7.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\8.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AccessCounter\Resources\gif34\9.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
+    <PackageReference Include="StackExchange.Redis" Version="2.0.505" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>
